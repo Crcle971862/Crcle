@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.See_User_Fragment">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/user_background"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:background="@drawable/face"
+        android:elevation="2sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_width="3dip"
+        app:riv_corner_radius_bottom_left="25sp"
+        app:riv_corner_radius_bottom_right="25sp"
+        app:riv_mutate_background="true"
+        tools:ignore="MissingConstraints" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/user_profile"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:background="@drawable/us"
+        android:elevation="2sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/user_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="@+id/user_background"
+        app:layout_constraintTop_toBottomOf="@+id/user_background"
+        app:riv_border_color="#00BCD4"
+        app:riv_border_width="3dip"
+        app:riv_corner_radius="20dip"
+        app:riv_mutate_background="true"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Manish chaurasiya"
+        android:fontFamily="@font/fonts"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/user_profile"
+        app:layout_constraintStart_toStartOf="@+id/user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile" />
+
+    <TextView
+        android:id="@+id/user_bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/fonts"
+        android:text="I am Android developer with 3 years experience"
+        android:textAlignment="center"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textColor="#6C6B6B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/background"
+        android:elevation="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/follow_btn">
+
+        <LinearLayout
+            android:id="@+id/total_followers"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="4sp">
+
+            <ImageView
+                android:id="@+id/follower_img"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:src="@drawable/follower" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="Followers"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="0"
+                android:textColor="#5C5B5B"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/total_following"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4sp">
+
+            <ImageView
+                android:id="@+id/followeing_img"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:src="@drawable/following" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="Following"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="0"
+                android:textColor="#5C5B5B"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4sp">
+
+            <ImageView
+                android:id="@+id/heart"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:src="@drawable/heart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="Likes"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="0"
+                android:textColor="#5C5B5B"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/total_post"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4sp">
+
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:src="@drawable/post" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="Posts"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/posts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/fonts"
+                android:text="0"
+                android:textColor="#5C5B5B"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/fonts"
+        android:text="Story highlights"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Keep your stories on your profile"
+        android:textColor="@color/black"
+        android:fontFamily="@font/fonts"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/highlights_rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/follow_btn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#09D7F1"
+        android:fontFamily="@font/fonts"
+        android:text="Follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_bio" />
+
+    <Button
+        android:id="@+id/edit_profile"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#F8FAFA"
+        android:fontFamily="@font/fonts"
+        android:text="unFollow"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_bio" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

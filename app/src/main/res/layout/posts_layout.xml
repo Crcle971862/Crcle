@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15sp">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/post_profile"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="8sp"
+            android:elevation="2sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prisma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="#00BCD4"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="10dip"
+            app:riv_mutate_background="true"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/post_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginTop="8sp"
+                android:fontFamily="@font/fonts"
+                android:maxLines="1"
+                android:text="Cortana"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/post_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_name"
+                android:layout_marginLeft="8sp"
+                android:layout_marginBottom="4sp"
+                android:fontFamily="@font/fonts"
+                android:text="2/03/2023" />
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginRight="10sp"
+                android:src="@drawable/options"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:fontFamily="@font/fonts"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:id="@+id/caption"
+        />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/post_image"
+        android:layout_width="match_parent"
+        android:layout_height="500sp"
+        android:layout_below="@+id/caption"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="8sp"
+        android:elevation="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="#F8F9FA"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="20dip"
+        app:riv_mutate_background="true"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_image"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginBottom="10sp">
+
+        <ImageView
+            android:id="@+id/post_like"
+            android:layout_width="35sp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20sp"
+            android:background="@color/white"
+            android:src="@drawable/like" />
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="35sp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:layout_marginLeft="20sp"
+            android:background="@color/white"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/post_comment"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30sp"
+            android:src="@drawable/comment" />
+
+        <TextView
+            android:id="@+id/total_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_like"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/fonts"
+            android:text="1000 likes"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_likes"
+            android:layout_marginLeft="20sp"
+            android:fontFamily="@font/fonts"
+            android:text="200 comments"
+            android:textColor="#5C5B5B"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

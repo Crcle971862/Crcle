@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_profile_Fragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fonts"
+        android:text="Edit profile "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/user_profile"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/us"
+        android:elevation="2sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:riv_border_color="#00BCD4"
+        app:riv_border_width="3dip"
+        app:riv_corner_radius="20dip"
+        app:riv_mutate_background="true"
+        tools:ignore="MissingConstraints" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/user_background"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="85dp"
+        android:background="@drawable/us"
+        android:elevation="2sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:riv_border_color="#00BCD4"
+        app:riv_border_width="3dip"
+        app:riv_corner_radius="20dip"
+        app:riv_mutate_background="true"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/edit_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fonts"
+        android:text="Edit background"
+        android:textColor="#05D1EC"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/user_background"
+        app:layout_constraintStart_toStartOf="@+id/user_background"
+        app:layout_constraintTop_toBottomOf="@+id/user_background" />
+
+
+    <TextView
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fonts"
+        android:text="Edit profile"
+        android:textColor="#05D1EC"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/user_profile"
+        app:layout_constraintStart_toStartOf="@+id/user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_btn">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:fontFamily="@font/fonts"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/fonts"
+            android:layout_marginRight="20sp"
+            android:hint="Enter Name Here" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/fonts"
+            android:text="Bio"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/fonts"
+            android:layout_marginRight="20sp"
+            android:hint="Enter Bio" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#00BCD4"
+        android:text="update"
+        android:fontFamily="@font/fonts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <Button
+        android:id="@+id/sign_out_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#F4F1F1"
+        android:text="sign out"
+        android:fontFamily="@font/fonts"
+        android:textColor="#050505"
+        app:layout_constraintEnd_toEndOf="@+id/update_btn"
+        app:layout_constraintStart_toStartOf="@+id/update_btn"
+        app:layout_constraintTop_toBottomOf="@+id/update_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

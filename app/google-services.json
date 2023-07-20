@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "356547559385",
+    "project_id": "crcle-b9cd1",
+    "storage_bucket": "crcle-b9cd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356547559385:android:652b05a5e54fbbe211e3c8",
+        "android_client_info": {
+          "package_name": "com.example.crcle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356547559385-l53emohfa2jpiamm5f4o5bpa1mbr1i27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.crcle",
+            "certificate_hash": "7fd018c5a5d4833cd732bf70ff004d5d9dc9ca93"
+          }
+        },
+        {
+          "client_id": "356547559385-gg26fk7edf88c9ve3flabtllgcudvhp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3XHjoPceVCKMwU7ekAVlW6hC3nUkVF14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356547559385-gg26fk7edf88c9ve3flabtllgcudvhp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

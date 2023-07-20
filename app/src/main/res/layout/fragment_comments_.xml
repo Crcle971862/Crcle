@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Comments_Fragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/face"
+        android:id="@+id/img"/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toBottomOf="@+id/img">
+
+        <ImageView
+            android:id="@+id/post_like"
+            android:layout_width="35sp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20sp"
+            android:background="@color/white"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/post_comment"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30sp"
+            android:src="@drawable/comment" />
+
+        <TextView
+            android:id="@+id/total_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_like"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/fonts"
+            android:text="1000 likes"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_likes"
+            android:layout_marginLeft="20sp"
+            android:fontFamily="@font/fonts"
+            android:text="200 comments"
+            android:textColor="#5C5B5B"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comments_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/relative" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/comments_rv"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/comment_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background"
+            android:ems="10"
+            android:elevation="5sp"
+            android:layout_weight="1"
+            android:hint="write your comments"
+            android:inputType="textMultiLine|textPersonName"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/comment_post_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/comment_et"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/nextbutton" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
